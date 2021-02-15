@@ -12,13 +12,14 @@
     <color name="black">#000000</color>
 
 
-    <!--  Faceook -->
+    <!-- Common Social Media -->
     <color name="facebook">#3b5998</color>
     <color name="facebook_add_story_button">#487FEB</color>
     <color name="facebook_wall">#F1F2F5</color>
     <color name="facebook_grey_button">#E5E6EB</color>
     <color name="facebook_dark_grey_text">#1D1F23</color>
     <color name="facebook_hint">#91949B</color>
+    <color name="insta_follow_button">#0095F6</color>
 
 
     <!-- New Color -->

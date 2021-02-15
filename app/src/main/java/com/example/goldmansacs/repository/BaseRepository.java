@@ -1,10 +1,10 @@
 package com.example.goldmansacs.repository;
 
-public class BaseNetworkRepository {
+public class BaseRepository {
 
     public native String key();
 
-    public BaseNetworkRepository() {
+    public BaseRepository() {
         System.loadLibrary("native-lib");
     }
 

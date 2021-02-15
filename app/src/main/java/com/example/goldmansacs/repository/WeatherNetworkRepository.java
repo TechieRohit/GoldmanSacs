@@ -11,7 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class WeatherNetworkRepository extends BaseNetworkRepository {
+public class WeatherNetworkRepository extends BaseRepository {
 
     private MutableLiveData<DataClass.WeatherDao> weatherDaoMutableLiveData = new MutableLiveData<>();
     private MutableLiveData<String> apiError = new MutableLiveData<>();
