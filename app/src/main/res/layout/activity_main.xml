@@ -23,174 +23,184 @@
                 android:id="@+id/toolbar"
                 layout="@layout/toolbar_home" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingBottom="40dp"
+                android:clipToPadding="false"
                 android:layout_marginTop="?attr/actionBarSize">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:paddingBottom="10dp"
-                    android:background="@drawable/bg_rect_solid_home"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    >
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/right_now"
-                        android:textColor="@color/main_text_color"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/txtPlace"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:drawableLeft="@drawable/baseline_fmd_good_white_18dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/main_text_color"
-                        android:textSize="22sp"
-                        app:layout_constraintStart_toStartOf="@+id/textView"
-                        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                    <TextView
-                        android:id="@+id/txtTemp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/main_text_color"
-                        android:textSize="40sp"
-                        app:layout_constraintStart_toStartOf="@+id/textView"
-                        app:layout_constraintTop_toBottomOf="@+id/txtPlace" />
-
-                    <TextView
-                        android:id="@+id/txtFeelslike"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
-                        android:textColor="@color/main_text_color"
-                        app:layout_constraintBottom_toBottomOf="@+id/txtPlace"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/txtPlace" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="0dp"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/bg_rect_solid_home"
-                    android:backgroundTint="@color/white"
-                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-                    <TextView
-                        android:id="@+id/txtHumidity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:text="HUMIDITY "
-                        android:textStyle="bold"
-                        android:padding="10dp"
-                        android:textColor="@color/white"
+                        android:paddingBottom="10dp"
                         android:background="@drawable/bg_rect_solid_home"
-                        android:backgroundTint="@color/facebook"
-                        app:layout_constraintStart_toStartOf="@+id/txtPressure"
-                        app:layout_constraintTop_toBottomOf="@+id/txtPressure" />
-
-
-                    <TextView
-                        android:id="@+id/txtSunrise"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:drawableLeft="@drawable/baseline_brightness_5_white_18dp"
-                        android:drawablePadding="2dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/sunrise"
-                        android:drawableTint="@color/black"
-                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:id="@+id/txtSunset"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginLeft="40dp"
-                        android:drawableLeft="@drawable/baseline_brightness_4_white_18dp"
-                        android:drawablePadding="2dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/sunset"
-                        android:drawableTint="@color/black"
-                        android:textColor="@color/black"                        app:layout_constraintBottom_toBottomOf="@+id/txtSunrise"
-                        app:layout_constraintStart_toEndOf="@+id/txtSunrise"
-                        app:layout_constraintTop_toTopOf="@+id/txtSunrise" />
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/right_now"
+                            android:textColor="@color/main_text_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/txtPressure"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        <TextView
+                            android:id="@+id/txtPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:drawableLeft="@drawable/baseline_fmd_good_white_18dp"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="22sp"
+                            app:layout_constraintStart_toStartOf="@+id/textView"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <TextView
+                            android:id="@+id/txtTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/main_text_color"
+                            android:textSize="40sp"
+                            app:layout_constraintStart_toStartOf="@+id/textView"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPlace" />
+
+                        <TextView
+                            android:id="@+id/txtFeelslike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:textColor="@color/main_text_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtPlace"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/txtPlace" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
                         android:layout_marginTop="16dp"
-                        android:drawableLeft="@drawable/baseline_call_made_white_18dp"
-                        android:drawablePadding="2dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/pressure"
-                        android:drawableTint="@color/black"
-                        android:textColor="@color/black"                        app:layout_constraintStart_toStartOf="@+id/txtTempmin"
-                        app:layout_constraintTop_toBottomOf="@+id/txtTempmin" />
+                        android:background="@drawable/bg_rect_solid_home"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-                    <TextView
-                        android:id="@+id/txtTempmin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:drawableLeft="@drawable/baseline_ac_unit_white_18dp"
-                        android:drawablePadding="2dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/temp_min"
-                        android:drawableTint="@color/black"
-                        android:textColor="@color/black"                        app:layout_constraintStart_toStartOf="@+id/txtSunrise"
-                        app:layout_constraintTop_toBottomOf="@+id/txtSunrise" />
+                        <TextView
+                            android:id="@+id/txtHumidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="HUMIDITY "
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:background="@drawable/bg_rect_solid_home"
+                            android:backgroundTint="@color/facebook"
+                            app:layout_constraintStart_toStartOf="@+id/txtPressure"
+                            app:layout_constraintTop_toBottomOf="@+id/txtPressure" />
 
-                    <TextView
-                        android:id="@+id/txtTempmax"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/baseline_local_fire_department_white_18dp"
-                        android:drawablePadding="2dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/temp_max"
-                        android:drawableTint="@color/black"
-                        android:textColor="@color/black"                        app:layout_constraintBottom_toBottomOf="@+id/txtTempmin"
-                        app:layout_constraintStart_toStartOf="@+id/txtSunset"
-                        app:layout_constraintTop_toTopOf="@+id/txtTempmin" />
+
+                        <TextView
+                            android:id="@+id/txtSunrise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:drawableLeft="@drawable/baseline_brightness_5_white_18dp"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/sunrise"
+                            android:drawableTint="@color/black"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtSunset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:drawableLeft="@drawable/baseline_brightness_4_white_18dp"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/sunset"
+                            android:drawableTint="@color/black"
+                            android:textColor="@color/black"                        app:layout_constraintBottom_toBottomOf="@+id/txtSunrise"
+                            app:layout_constraintStart_toEndOf="@+id/txtSunrise"
+                            app:layout_constraintTop_toTopOf="@+id/txtSunrise" />
+
+                        <TextView
+                            android:id="@+id/txtPressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:drawableLeft="@drawable/baseline_call_made_white_18dp"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/pressure"
+                            android:drawableTint="@color/black"
+                            android:textColor="@color/black"                        app:layout_constraintStart_toStartOf="@+id/txtTempmin"
+                            app:layout_constraintTop_toBottomOf="@+id/txtTempmin" />
+
+                        <TextView
+                            android:id="@+id/txtTempmin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:drawableLeft="@drawable/baseline_ac_unit_white_18dp"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/temp_min"
+                            android:drawableTint="@color/black"
+                            android:textColor="@color/black"                        app:layout_constraintStart_toStartOf="@+id/txtSunrise"
+                            app:layout_constraintTop_toBottomOf="@+id/txtSunrise" />
+
+                        <TextView
+                            android:id="@+id/txtTempmax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/baseline_local_fire_department_white_18dp"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/temp_max"
+                            android:drawableTint="@color/black"
+                            android:textColor="@color/black"                        app:layout_constraintBottom_toBottomOf="@+id/txtTempmin"
+                            app:layout_constraintStart_toStartOf="@+id/txtSunset"
+                            app:layout_constraintTop_toTopOf="@+id/txtTempmin" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+            </ScrollView>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
