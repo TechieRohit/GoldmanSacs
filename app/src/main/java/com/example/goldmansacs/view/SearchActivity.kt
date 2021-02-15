@@ -7,18 +7,21 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.AdapterView
 import android.widget.AutoCompleteTextView
+import android.widget.LinearLayout
 import android.widget.TextView.OnEditorActionListener
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.goldmansacs.R
+import com.example.goldmansacs.database.WeatherDao
 import com.example.goldmansacs.model.DataClass
 import com.example.goldmansacs.utils.Constants
 import com.example.goldmansacs.viewmodels.SearchViewModel
 import kotlinx.android.synthetic.main.activity_search.*
 
 
-class SearchActivity : BaseActivity(),View.OnClickListener {
+class SearchActivity : BaseActivity(),View.OnClickListener,SavedPlacesAdapter.SavedData {
 
     private var weatherDataList : List<DataClass.WeatherDao> = emptyList()
     private lateinit var searchViewModel : SearchViewModel
@@ -36,6 +39,11 @@ class SearchActivity : BaseActivity(),View.OnClickListener {
         searchViewModel = ViewModelProviders.of(this).get(SearchViewModel::class.java)
         autoCompleteTextView = findViewById(R.id.searchCity)
         weatherDataList = searchViewModel.getSavedData() as List<DataClass.WeatherDao>
+
+        val savedPlacesAdapter = SavedPlacesAdapter(weatherDataList,this,this)
+        recyclerSavedPlaces.layoutManager = LinearLayoutManager(this)
+        recyclerSavedPlaces.adapter = savedPlacesAdapter
+
         val adapter = SearchArrayAdapter(
             this,
             android.R.layout.simple_list_item_1,
@@ -98,6 +106,10 @@ class SearchActivity : BaseActivity(),View.OnClickListener {
                 finish()
             }
         }
+    }
+
+    override fun getSavedData(weatherDao: DataClass.WeatherDao) {
+        sendData(weatherDao)
     }
 
 
