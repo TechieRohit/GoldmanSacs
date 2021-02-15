@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.goldmansacs.R
 import com.example.goldmansacs.database.WeatherDao
 import com.example.goldmansacs.model.DataClass
+import com.example.goldmansacs.utils.AppUtils
 import com.example.goldmansacs.utils.Constants
 import com.example.goldmansacs.viewmodels.SearchViewModel
 import kotlinx.android.synthetic.main.activity_search.*
@@ -99,8 +100,12 @@ class SearchActivity : BaseActivity(),View.OnClickListener,SavedPlacesAdapter.Sa
     override fun onClick(v: View?) {
         when(v?.id) {
             R.id.search -> {
-                showProgressDialog(getString(R.string.progress_txt))
-                searchViewModel.fetchData(searchCity.text.toString())
+                if (AppUtils.NetworkUtils.isConnected(this)) {
+                    showProgressDialog(getString(R.string.progress_txt))
+                    searchViewModel.fetchData(searchCity.text.toString())
+                }else{
+                    Toast.makeText(this,"Please check your internet connection",Toast.LENGTH_LONG).show()
+                }
             }
             R.id.back -> {
                 finish()
