@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#3b5998</color>
+
+
+    <color name="activity_background_color">#000000</color>
+
+    <color name="color_lightest_bg">#FAFAFA</color>
+    <color name="white">#FFFF</color>
+    <color name="black">#000000</color>
+
+
+    <!--  Faceook -->
+    <color name="facebook">#3b5998</color>
+    <color name="facebook_add_story_button">#487FEB</color>
+    <color name="facebook_wall">#F1F2F5</color>
+    <color name="facebook_grey_button">#E5E6EB</color>
+    <color name="facebook_dark_grey_text">#1D1F23</color>
+    <color name="facebook_hint">#91949B</color>
+
+
+    <!-- New Color -->
+    <color name="main_text_color">#FFFFFF</color>
+    <color name="main_wall">#9FACB2</color>
+    <color name="toolbar_color">#135394</color>
+</resources>

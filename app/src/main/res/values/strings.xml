@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="right_now">Right now</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="pressure">Pressure</string>
+    <string name="temp_min">Temp min</string>
+    <string name="temp_max">Temp max</string>
+    <string name="city">City</string>
+    <string name="my_locations">My Locations</string>
+    <string name="progress_txt">Fetching weather...</string>
+</resources>
