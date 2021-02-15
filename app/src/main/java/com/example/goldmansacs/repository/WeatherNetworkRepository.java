@@ -11,13 +11,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class WeatherNetworkNetworkRepository extends BaseNetworkRepository {
+public class WeatherNetworkRepository extends BaseNetworkRepository {
 
     private MutableLiveData<DataClass.WeatherDao> weatherDaoMutableLiveData = new MutableLiveData<>();
     private MutableLiveData<String> apiError = new MutableLiveData<>();
     private APIInterface apiInterface;
 
-    public WeatherNetworkNetworkRepository() {
+    public WeatherNetworkRepository() {
         apiInterface = APIClient.getClient().create(APIInterface.class);
     }
 

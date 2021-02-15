@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.goldmansacs.model.DataClass
 import com.example.goldmansacs.repository.WeatherLocalRepository
-import com.example.goldmansacs.repository.WeatherNetworkNetworkRepository
+import com.example.goldmansacs.repository.WeatherNetworkRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -15,7 +15,7 @@ public class SearchViewModel(application: Application) : BaseViewModel(applicati
     val weatherLocalRepository =
         WeatherLocalRepository(application)
     val weatherNetworkRepository =
-        WeatherNetworkNetworkRepository()
+        WeatherNetworkRepository()
 
     fun fetchData(city: String) {
         if (city.isEmpty()) {
